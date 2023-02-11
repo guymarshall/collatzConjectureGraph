@@ -39,12 +39,14 @@ def main():
     number = int(input("Enter a whole number greater than 0: "))
     decision = input("Would you like to calculate 'steps' or 'max'? ").lower()
 
-    x_axis = []
-    y_axis = []
-
     if decision == "steps":
-        result = collatz_steps(number)
-        print(f"Steps for {number} is {result}")
+        x_axis = list(range(1, number + 1))
+        y_axis = []
+
+        for i in range(1, number + 1):
+            y_axis.append(collatz_steps(i))
+        
+        plot_graph(x_axis, y_axis, "Starting Number", "Number of Steps", "A graph to show the relationship between the starting number and the number of steps")
     elif decision == "max":
         result = collatz_max(number)
         print(f"Max for {number} is {result}")
