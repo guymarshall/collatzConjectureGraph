@@ -1,4 +1,4 @@
-def collatz_steps(number):
+def collatz_steps(number: int) -> int:
     steps = 0
 
     while number > 1:
@@ -10,7 +10,7 @@ def collatz_steps(number):
     
     return steps
 
-def collatz_max(number):
+def collatz_max(number: int) -> int:
     max_number = number
 
     while number > 1:
