@@ -6,7 +6,7 @@ def collatz_steps(number: int) -> int:
             number = number / 2
         else:
             number = (3 * number) + 1
-        steps.append(number)
+        steps.append(int(number))
     
     return steps
 
