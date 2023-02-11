@@ -1,7 +1,7 @@
 import matplotlib.pyplot as plt
 
 def plot_graph(x_axis: list, y_axis: list, x_label: str, y_label: str, title: str):
-    plt.plot(x_axis, y_axis)
+    plt.plot(x_axis, y_axis, linewidth=0.2)
     plt.xlabel(x_label)
     plt.ylabel(y_label)
     plt.title(title)
