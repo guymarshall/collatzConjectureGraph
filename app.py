@@ -22,3 +22,9 @@ def collatz_max(number: int) -> int:
             max_number = number
     
     return max_number
+
+def main():
+    number = int(input("Enter a whole number greater than 0: "))
+
+if __name__ == "__main__":
+    main()
