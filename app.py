@@ -25,6 +25,18 @@ def collatz_max(number: int) -> int:
 
 def main():
     number = int(input("Enter a whole number greater than 0: "))
+    decision = input("Would you like to calculate 'steps' or 'max'? ").lower()
+
+    if decision == "steps":
+        result = collatz_steps(number)
+        print(f"Steps for {number} is {result}")
+    elif decision == "max":
+        result = collatz_max(number)
+        print(f"Max for {number} is {result}")
+    else:
+        print("Invalid input. Please enter either 'steps' or 'max'.")
+        quit()
+    
 
 if __name__ == "__main__":
     main()
