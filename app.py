@@ -1,4 +1,5 @@
 import matplotlib.pyplot as plt
+from numba import jit
 
 def plot_graph(x_axis: list, y_axis: list, x_label: str, y_label: str, title: str):
     plt.scatter(x_axis, y_axis)
@@ -8,6 +9,7 @@ def plot_graph(x_axis: list, y_axis: list, x_label: str, y_label: str, title: st
     plt.show()
 
 
+@jit
 def collatz_steps(number: int) -> int:
     steps = 0
 
