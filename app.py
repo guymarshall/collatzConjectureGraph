@@ -1,5 +1,6 @@
 import matplotlib.pyplot as plt
 from numba import jit
+from multiprocessing import Pool, cpu_count
 
 def plot_graph(x_axis: list, y_axis: list, x_label: str, y_label: str, title: str):
     plt.scatter(x_axis, y_axis, s=1)
@@ -29,8 +30,8 @@ def main():
     x_axis = list(range(1, number + 1))
     y_axis = []
 
-    for i in range(1, number + 1):
-        y_axis.append(collatz_steps(i))
+    with Pool(processes=cpu_count()) as pool:
+        y_axis = pool.map(collatz_steps, range(1, number + 1))
     
     plot_graph(x_axis, y_axis, "Starting Number", "Number of Steps", "A graph to show the relationship between the starting number and the number of steps")
     
