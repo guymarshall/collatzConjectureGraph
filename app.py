@@ -9,16 +9,16 @@ def plot_graph(x_axis: list, y_axis: list, x_label: str, y_label: str, title: st
 
 
 def collatz_steps(number: int) -> int:
-    steps = []
+    steps = 0
 
     while number > 1:
         if number % 2 == 0:
             number = number / 2
         else:
             number = (3 * number) + 1
-        steps.append(int(number))
+        steps += 1
     
-    return steps
+    return int(steps)
 
 
 def collatz_max(number: int) -> int:
