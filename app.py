@@ -20,7 +20,7 @@ def collatz_steps(number: int) -> int:
             number = (3 * number) + 1
         steps += 1
     
-    return int(steps)
+    return steps
 
 
 def main():
