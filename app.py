@@ -1,3 +1,13 @@
+import matplotlib.pyplot as plt
+
+def plot_graph(x_axis: list, y_axis: list, x_label: str, y_label: str, title: str):
+    plt.plot(x_axis, y_axis)
+    plt.xlabel(x_label)
+    plt.ylabel(y_label)
+    plt.title(title)
+    plt.show()
+
+
 def collatz_steps(number: int) -> int:
     steps = []
 
@@ -28,6 +38,9 @@ def collatz_max(number: int) -> int:
 def main():
     number = int(input("Enter a whole number greater than 0: "))
     decision = input("Would you like to calculate 'steps' or 'max'? ").lower()
+
+    x_axis = []
+    y_axis = []
 
     if decision == "steps":
         result = collatz_steps(number)
