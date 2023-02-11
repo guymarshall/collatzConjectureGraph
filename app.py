@@ -8,7 +8,7 @@ def collatz_steps(number: int) -> int:
             number = (3 * number) + 1
         steps += 1
     
-    return steps
+    return int(steps)
 
 def collatz_max(number: int) -> int:
     max_number = number
@@ -21,7 +21,7 @@ def collatz_max(number: int) -> int:
         if number > max_number:
             max_number = number
     
-    return max_number
+    return int(max_number)
 
 def main():
     number = int(input("Enter a whole number greater than 0: "))
