@@ -15,7 +15,7 @@ def collatz_steps(number: int) -> int:
 
     while number > 1:
         if number % 2 == 0:
-            number = number / 2
+            number = number >> 1
         else:
             number = (3 * number) + 1
         steps += 1
