@@ -33,7 +33,7 @@ def main():
     with Pool(processes=cpu_count()) as pool:
         y_axis = pool.map(collatz_steps, range(1, number + 1))
 
-    plot_graph(x_axis, y_axis, "Starting Number", "Number of Steps", "A graph to show the relationship between the starting number and the number of steps")
+    plot_graph(x_axis, y_axis, "Starting Number", "Number of Steps", "Number of steps VS Starting Number")
 
 
 if __name__ == "__main__":
