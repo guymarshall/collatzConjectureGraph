@@ -20,7 +20,7 @@ def collatz_steps(number: int) -> int:
         else:
             number = (3 * number) + 1
         steps += 1
-    
+
     return steps
 
 
@@ -32,9 +32,9 @@ def main():
 
     with Pool(processes=cpu_count()) as pool:
         y_axis = pool.map(collatz_steps, range(1, number + 1))
-    
+
     plot_graph(x_axis, y_axis, "Starting Number", "Number of Steps", "A graph to show the relationship between the starting number and the number of steps")
-    
+
 
 if __name__ == "__main__":
     main()
